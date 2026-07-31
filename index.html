@@ -47,6 +47,7 @@
     --radius-s: 6px;
     --radius-m: 14px;
     --radius-l: 22px;
+    --shadow-xs: 0 8px 22px -12px rgba(43, 38, 34, 0.14);
     --shadow-soft: 0 12px 40px -12px rgba(43, 38, 34, 0.16);
     --shadow-hover: 0 20px 48px -14px rgba(43, 38, 34, 0.24);
     --maxw: 1240px;
@@ -58,7 +59,7 @@
 
   body {
     margin: 0;
-    background: var(--cream);
+    background: linear-gradient(180deg, #FCFAF6 0%, var(--cream) 40%, var(--cream) 100%);
     color: var(--ink);
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -226,7 +227,7 @@
     white-space: nowrap;
   }
   .btn-primary {
-    background: var(--sage-dark);
+    background: linear-gradient(160deg, #6E8577 0%, var(--sage-dark) 100%);
     color: #FFF8F2;
     box-shadow: 0 10px 26px -10px rgba(95,115,101,0.55);
   }
@@ -245,12 +246,35 @@
 
   /* ---------- HERO ---------- */
   .hero {
+    position: relative;
     padding-top: clamp(140px, 20vw, 200px);
     padding-bottom: var(--section-pad);
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
     gap: clamp(32px, 5vw, 72px);
     align-items: center;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 55%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(126,147,133,0.16), transparent 65%);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    right: -12%;
+    width: 45%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(176,141,87,0.12), transparent 65%);
+    z-index: -1;
+    pointer-events: none;
   }
   .hero h1 {
     font-size: clamp(2.4rem, 4.6vw, 3.8rem);
@@ -279,6 +303,10 @@
     align-items: center;
     gap: 8px;
     margin-top: 18px;
+    padding: 10px 18px;
+    background: var(--cream);
+    border-radius: 999px;
+    box-shadow: var(--shadow-xs);
     font-size: 0.86rem;
     color: var(--ink-soft);
   }
@@ -286,7 +314,12 @@
   .hero-photo .photo-slot, .hero-photo .media { aspect-ratio: 4/5; }
 
   /* ---------- SINTOMAS ---------- */
-  .symptoms { background: var(--cream-2); }
+  .symptoms {
+    position: relative;
+    background: var(--cream-2);
+    background-image: radial-gradient(circle at 85% 10%, rgba(255,255,255,0.6), transparent 55%);
+    overflow: hidden;
+  }
   .symptoms-inner {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -305,13 +338,16 @@
   }
   .symptom-card {
     background: var(--cream);
-    border: 1px solid rgba(43,38,34,0.08);
+    border: 1px solid rgba(43,38,34,0.06);
     border-radius: var(--radius-m);
     padding: 26px 24px;
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    box-shadow: var(--shadow-xs);
+    transition: transform .25s ease, box-shadow .25s ease;
   }
+  .symptom-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
   .symptom-card .dot {
     width: 8px; height: 8px; border-radius: 50%;
     background: var(--sage-dark);
@@ -335,7 +371,22 @@
   .solution-link:hover svg { transform: translateY(3px); }
 
   /* ---------- SERVIÇOS ---------- */
-  .services { background: var(--walnut); color: var(--walnut-text); }
+  .services {
+    position: relative;
+    background: linear-gradient(165deg, #3D2F23 0%, #2C2119 100%);
+    color: var(--walnut-text);
+    overflow: hidden;
+  }
+  .services::before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    width: 50%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(176,141,87,0.14), transparent 65%);
+    pointer-events: none;
+  }
   .services .eyebrow { color: #D8B98F; }
   .services .eyebrow::before { background: var(--gold); }
   .services h2 { color: var(--walnut-text); font-size: clamp(1.9rem, 3.2vw, 2.6rem); max-width: 22ch; }
@@ -346,10 +397,11 @@
     gap: 22px;
   }
   .service-card {
-    background: var(--walnut-2);
+    background: linear-gradient(160deg, #4A3B2C 0%, var(--walnut-2) 100%);
     border: 1px solid rgba(242,236,226,0.1);
     border-radius: var(--radius-m);
     padding: 30px 24px;
+    box-shadow: 0 14px 30px -18px rgba(0,0,0,0.5);
     transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   }
   .service-card:hover {
@@ -361,6 +413,7 @@
     width: 40px; height: 40px;
     border-radius: 50%;
     border: 1px solid var(--gold);
+    background: radial-gradient(circle at 30% 25%, rgba(176,141,87,0.22), transparent 70%);
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 20px;
     color: var(--gold);
@@ -432,6 +485,7 @@
     padding: 18px 22px;
     background: var(--cream-2);
     border-radius: var(--radius-s);
+    box-shadow: var(--shadow-xs);
     max-width: fit-content;
   }
   .process-note svg { width: 18px; height: 18px; color: var(--sage-dark); flex-shrink: 0; }
@@ -460,13 +514,21 @@
     font-size: 0.88rem;
     color: var(--ink);
     padding: 14px 16px;
-    border: 1px solid rgba(43,38,34,0.12);
+    background: var(--cream);
+    border: 1px solid rgba(43,38,34,0.08);
     border-radius: var(--radius-s);
+    box-shadow: var(--shadow-xs);
+    transition: transform .25s ease, box-shadow .25s ease;
   }
+  .credential-chip:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
   .credential-chip svg { width: 16px; height: 16px; color: var(--sage-dark); flex-shrink: 0; }
 
   /* ---------- DIFERENCIAIS ---------- */
-  .differentials { background: var(--cream-2); }
+  .differentials {
+    position: relative;
+    background: var(--cream-2);
+    background-image: radial-gradient(circle at 10% 90%, rgba(255,255,255,0.55), transparent 55%);
+  }
   .differentials-head h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); max-width: 20ch; }
   .diff-grid {
     margin-top: 48px;
@@ -474,11 +536,19 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
-  .diff-card { text-align: left; }
+  .diff-card {
+    text-align: left;
+    background: var(--cream);
+    padding: 26px 22px;
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-xs);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .diff-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
   .diff-card .diff-num {
     font-family: 'Fraunces', serif;
     font-style: italic;
-    color: var(--ink-faint);
+    color: var(--gold);
     font-size: 1.4rem;
     margin-bottom: 14px;
     display: block;
@@ -494,8 +564,10 @@
     align-items: center;
     gap: 16px;
     padding: 16px 22px;
-    border: 1px solid rgba(43,38,34,0.12);
+    background: var(--cream);
+    border: 1px solid rgba(43,38,34,0.08);
     border-radius: var(--radius-m);
+    box-shadow: var(--shadow-xs);
   }
   .stat-badge .num { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--ink); }
   .stat-badge .lbl { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.3; }
@@ -509,10 +581,13 @@
   }
   .testimonial-card {
     background: var(--cream);
-    border: 1px solid rgba(43,38,34,0.08);
+    border: 1px solid rgba(43,38,34,0.06);
     border-radius: var(--radius-m);
     padding: 30px 28px;
+    box-shadow: var(--shadow-xs);
+    transition: transform .25s ease, box-shadow .25s ease;
   }
+  .testimonial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
   .testimonial-card .quote-mark { font-family: 'Fraunces', serif; font-size: 2.4rem; color: var(--gold); line-height: 1; margin-bottom: 6px; }
   .testimonial-card blockquote {
     margin: 0 0 18px;
@@ -527,9 +602,10 @@
   .testimonial-featured {
     margin-top: 24px;
     background: var(--cream);
-    border: 1px solid rgba(43,38,34,0.08);
+    border: 1px solid rgba(43,38,34,0.06);
     border-radius: var(--radius-m);
     padding: clamp(28px, 4vw, 44px);
+    box-shadow: var(--shadow-soft);
   }
   .testimonial-featured .quote-mark { font-family: 'Fraunces', serif; font-size: 2.8rem; color: var(--gold); line-height: 1; margin-bottom: 6px; }
   .testimonial-featured blockquote { margin: 0 0 18px; max-width: 74ch; }
@@ -547,7 +623,10 @@
   .testimonials-cta { margin-top: 40px; text-align: center; }
 
   /* ---------- FAQ ---------- */
-  .faq { background: var(--cream-2); }
+  .faq {
+    background: var(--cream-2);
+    background-image: radial-gradient(circle at 90% 15%, rgba(255,255,255,0.55), transparent 55%);
+  }
   .faq-inner { max-width: 780px; margin: 0 auto; }
   .faq-inner .eyebrow, .faq-inner h2 { text-align: center; width: 100%; }
   .faq-inner .eyebrow { justify-content: center; }
@@ -581,8 +660,28 @@
   .faq-cta { text-align: center; margin-top: 44px; }
 
   /* ---------- CTA FINAL ---------- */
-  .cta-final { background: var(--walnut); color: var(--walnut-text); text-align: center; }
-  .cta-final .container { max-width: 720px; }
+  .cta-final {
+    position: relative;
+    background: linear-gradient(165deg, #3D2F23 0%, #2C2119 100%);
+    color: var(--walnut-text);
+    text-align: center;
+    overflow: hidden;
+  }
+  .cta-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(165deg, rgba(61,47,35,0.90) 0%, rgba(44,33,25,0.94) 100%);
+    z-index: 1;
+  }
+  .cta-final .container { position: relative; z-index: 2; max-width: 720px; }
   .cta-final h2 { color: var(--walnut-text); font-size: clamp(2rem, 4vw, 2.8rem); }
   .cta-final .subhead { margin-top: 18px; color: #CBBFAD; font-size: 1.08rem; }
   .cta-final .hero-cta-row { justify-content: center; margin-top: 36px; }
@@ -638,7 +737,7 @@
     position: fixed;
     bottom: 0; left: 0; right: 0;
     z-index: 90;
-    background: var(--sage-dark);
+    background: linear-gradient(160deg, #6E8577 0%, var(--sage-dark) 100%);
     padding: 14px clamp(20px, 5vw, 48px);
     align-items: center;
     justify-content: center;
@@ -656,7 +755,7 @@
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    background: var(--sage-dark);
+    background: linear-gradient(160deg, #6E8577 0%, var(--sage-dark) 100%);
     color: #FFF8F2;
     display: flex;
     align-items: center;
@@ -1029,6 +1128,8 @@
 
 <!-- ============ CTA FINAL ============ -->
 <section class="cta-final">
+  <video class="cta-video" src="images/cta-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+  <div class="cta-overlay"></div>
   <div class="container reveal">
     <h2>Seu filho merece uma consulta que investiga de verdade.</h2>
     <p class="subhead">Agende agora e leve pra casa mais do que um diagnóstico: leve clareza.</p>
