@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Jaqueline Bordin | Pediatra e Gastropediatra em Porto Alegre</title>
+<meta name="description" content="Pediatra e gastropediatra em Porto Alegre. Atendimento particular individualizado, do nascimento aos 14 anos. Nota 4,9 no Google. Agende sua consulta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dra. Jaqueline Bordin",
+  "medicalSpecialty": ["Pediatria", "Gastroenterologia Pediátrica"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Miguel Tostes, 201 - Sala 706",
+    "addressLocality": "Porto Alegre",
+    "addressRegion": "RS",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5551996204361",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "50"
+  }
+}
+</script>
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --cream-2: #F2ECE2;
+    --ink: #2B2622;
+    --ink-soft: #6B6259;
+    --ink-faint: #a39a8f;
+    --sage: #7E9385;
+    --sage-dark: #5F7365;
+    --terracotta: #C1694F;
+    --terracotta-dark: #A6543C;
+    --gold: #B08D57;
+    --walnut: #35291F;
+    --walnut-2: #443528;
+    --walnut-text: #F2ECE2;
+    --radius-s: 6px;
+    --radius-m: 14px;
+    --radius-l: 22px;
+    --shadow-soft: 0 12px 40px -12px rgba(43, 38, 34, 0.16);
+    --shadow-hover: 0 20px 48px -14px rgba(43, 38, 34, 0.24);
+    --maxw: 1240px;
+    --section-pad: clamp(64px, 10vw, 152px);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, .photo-slot { max-width: 100%; display: block; }
+
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    line-height: 1.12;
+    margin: 0;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  p { margin: 0; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 48px);
+  }
+
+  section { padding: var(--section-pad) 0; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--gold);
+    display: inline-block;
+  }
+
+  /* Placeholder de foto: trocar por <img> real quando os arquivos forem adicionados em /images */
+  .photo-slot {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-m);
+    background: linear-gradient(150deg, #ECE4D6 0%, #E3D9C7 55%, #D9CDB8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+  .photo-slot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 55%);
+  }
+  .photo-slot span {
+    position: relative;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    text-align: center;
+    padding: 24px;
+    max-width: 80%;
+  }
+
+  /* Foto/vídeo real */
+  .media {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-soft);
+    object-fit: cover;
+  }
+  video.media { background: var(--walnut); }
+
+  /* ---------- HEADER ---------- */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250, 247, 242, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(43, 38, 34, 0.06);
+    transition: box-shadow .3s ease;
+  }
+  header.scrolled { box-shadow: 0 6px 24px -12px rgba(43,38,34,0.12); }
+  .nav-row {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 16px clamp(20px, 5vw, 48px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  .logo small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  nav.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  nav.menu a.navlink {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    position: relative;
+    padding-bottom: 4px;
+  }
+  nav.menu a.navlink::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0%; height: 1px;
+    background: var(--gold);
+    transition: width .25s ease;
+  }
+  nav.menu a.navlink:hover::after,
+  nav.menu a.navlink.active::after { width: 100%; }
+  nav.menu a.navlink.active { color: var(--ink); }
+
+  .header-actions { display: flex; align-items: center; gap: 18px; }
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; transition: .25s; }
+
+  /* ---------- BUTTONS ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 14px 26px;
+    border-radius: var(--radius-s);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--sage-dark);
+    color: #FFF8F2;
+    box-shadow: 0 10px 26px -10px rgba(95,115,101,0.55);
+  }
+  .btn-primary:hover { background: #4C5D52; transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .btn-ghost {
+    background: transparent;
+    border-color: rgba(43,38,34,0.22);
+    color: var(--ink);
+  }
+  .btn-ghost:hover { border-color: var(--ink); background: rgba(43,38,34,0.04); }
+  .btn-ghost.on-dark { border-color: rgba(242,236,226,0.35); color: var(--walnut-text); }
+  .btn-ghost.on-dark:hover { border-color: var(--walnut-text); background: rgba(242,236,226,0.08); }
+  .btn-sm { padding: 10px 18px; font-size: 0.82rem; }
+
+  .icon-wa { width: 18px; height: 18px; flex-shrink: 0; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding-top: clamp(140px, 20vw, 200px);
+    padding-bottom: var(--section-pad);
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+  }
+  .hero .subhead {
+    margin-top: 22px;
+    font-size: 1.14rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+  .hero-cta-row {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .credential-line {
+    margin-top: 40px;
+    font-size: 0.84rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+  .rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+  }
+  .rating-badge .stars { color: var(--gold); letter-spacing: 1px; }
+  .hero-photo .photo-slot, .hero-photo .media { aspect-ratio: 4/5; }
+
+  /* ---------- SINTOMAS ---------- */
+  .symptoms { background: var(--cream-2); }
+  .symptoms-inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(32px, 6vw, 72px);
+    align-items: center;
+  }
+  .symptoms-photo .media { aspect-ratio: 4/5; }
+  .symptoms-head { max-width: 62ch; }
+  .symptoms-head h2 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); }
+  .symptoms-head .subhead { margin-top: 16px; color: var(--ink-soft); font-size: 1.05rem; }
+  .symptom-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .symptom-card {
+    background: var(--cream);
+    border: 1px solid rgba(43,38,34,0.08);
+    border-radius: var(--radius-m);
+    padding: 26px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .symptom-card .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--sage-dark);
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+  .symptom-card p { font-size: 0.98rem; color: var(--ink); }
+
+  /* ---------- SOLUÇÃO ---------- */
+  .solution {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+  }
+  .solution h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
+  .solution .subhead { margin-top: 20px; font-size: 1.08rem; color: var(--ink-soft); max-width: 46ch; }
+  .solution .photo-slot, .solution .media { aspect-ratio: 5/4; }
+  .solution-link { margin-top: 28px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--sage-dark); }
+  .solution-link svg { width: 16px; height: 16px; transition: transform .2s ease; }
+  .solution-link:hover svg { transform: translateY(3px); }
+
+  /* ---------- SERVIÇOS ---------- */
+  .services { background: var(--walnut); color: var(--walnut-text); }
+  .services .eyebrow { color: #D8B98F; }
+  .services .eyebrow::before { background: var(--gold); }
+  .services h2 { color: var(--walnut-text); font-size: clamp(1.9rem, 3.2vw, 2.6rem); max-width: 22ch; }
+  .services-grid {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+  .service-card {
+    background: var(--walnut-2);
+    border: 1px solid rgba(242,236,226,0.1);
+    border-radius: var(--radius-m);
+    padding: 30px 24px;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(176,141,87,0.5);
+    box-shadow: 0 20px 40px -16px rgba(0,0,0,0.4);
+  }
+  .service-icon {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+    color: var(--gold);
+  }
+  .service-icon svg { width: 18px; height: 18px; }
+  .service-card h3 { color: var(--walnut-text); font-size: 1.08rem; margin-bottom: 10px; font-weight: 500; }
+  .service-card p { color: #C9BDAC; font-size: 0.92rem; }
+
+  .gallery-label {
+    margin-top: 64px;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #C9BDAC;
+    font-weight: 600;
+  }
+  .services-gallery {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .gallery-item {
+    transition: transform .25s ease;
+    overflow: hidden;
+    border-radius: var(--radius-m);
+    box-shadow: 0 20px 40px -16px rgba(0,0,0,0.4);
+  }
+  .gallery-item:hover { transform: translateY(-4px); }
+  .gallery-item .media {
+    aspect-ratio: 4/5;
+    box-shadow: none;
+    transform: scale(1.16);
+  }
+
+  /* ---------- COMO FUNCIONA ---------- */
+  .process-inner {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(32px, 6vw, 80px);
+    align-items: start;
+  }
+  .process-photo .media { aspect-ratio: 4/5; position: sticky; top: 120px; }
+  .process-head { max-width: 60ch; }
+  .process-head h2 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); }
+  .process-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .process-step { position: relative; padding-top: 28px; border-top: 1px solid rgba(43,38,34,0.14); }
+  .process-step .num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 14px;
+  }
+  .process-step h3 { font-size: 1.02rem; font-weight: 500; margin-bottom: 8px; }
+  .process-step p { color: var(--ink-soft); font-size: 0.92rem; }
+  .process-note {
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    padding: 18px 22px;
+    background: var(--cream-2);
+    border-radius: var(--radius-s);
+    max-width: fit-content;
+  }
+  .process-note svg { width: 18px; height: 18px; color: var(--sage-dark); flex-shrink: 0; }
+  .process-cta { margin-top: 40px; }
+
+  /* ---------- SOBRE A MÉDICA ---------- */
+  .about {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+  }
+  .about .photo-slot, .about .media { aspect-ratio: 4/5; }
+  .about h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); }
+  .about .subhead { margin-top: 20px; font-size: 1.06rem; color: var(--ink-soft); }
+  .credentials-list {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .credential-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: var(--ink);
+    padding: 14px 16px;
+    border: 1px solid rgba(43,38,34,0.12);
+    border-radius: var(--radius-s);
+  }
+  .credential-chip svg { width: 16px; height: 16px; color: var(--sage-dark); flex-shrink: 0; }
+
+  /* ---------- DIFERENCIAIS ---------- */
+  .differentials { background: var(--cream-2); }
+  .differentials-head h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); max-width: 20ch; }
+  .diff-grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .diff-card { text-align: left; }
+  .diff-card .diff-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .diff-card h3 { font-size: 1rem; font-weight: 500; margin-bottom: 8px; }
+  .diff-card p { font-size: 0.9rem; color: var(--ink-soft); }
+
+  /* ---------- DEPOIMENTOS ---------- */
+  .testimonials-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .testimonials-head h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); max-width: 18ch; }
+  .stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    border: 1px solid rgba(43,38,34,0.12);
+    border-radius: var(--radius-m);
+  }
+  .stat-badge .num { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--ink); }
+  .stat-badge .lbl { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.3; }
+  .stat-badge .stars { color: var(--gold); font-size: 0.9rem; }
+
+  .testimonial-grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .testimonial-card {
+    background: var(--cream);
+    border: 1px solid rgba(43,38,34,0.08);
+    border-radius: var(--radius-m);
+    padding: 30px 28px;
+  }
+  .testimonial-card .quote-mark { font-family: 'Fraunces', serif; font-size: 2.4rem; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+  .testimonial-card blockquote {
+    margin: 0 0 18px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .testimonial-card .who { font-size: 0.88rem; color: var(--ink-soft); font-weight: 600; }
+
+  .testimonial-featured {
+    margin-top: 24px;
+    background: var(--cream);
+    border: 1px solid rgba(43,38,34,0.08);
+    border-radius: var(--radius-m);
+    padding: clamp(28px, 4vw, 44px);
+  }
+  .testimonial-featured .quote-mark { font-family: 'Fraunces', serif; font-size: 2.8rem; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+  .testimonial-featured blockquote { margin: 0 0 18px; max-width: 74ch; }
+  .testimonial-featured blockquote p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--ink);
+    line-height: 1.6;
+    margin: 0 0 16px;
+  }
+  .testimonial-featured blockquote p:last-child { margin-bottom: 0; }
+  .testimonial-featured .who { font-size: 0.88rem; color: var(--ink-soft); font-weight: 600; }
+
+  .testimonials-cta { margin-top: 40px; text-align: center; }
+
+  /* ---------- FAQ ---------- */
+  .faq { background: var(--cream-2); }
+  .faq-inner { max-width: 780px; margin: 0 auto; }
+  .faq-inner .eyebrow, .faq-inner h2 { text-align: center; width: 100%; }
+  .faq-inner .eyebrow { justify-content: center; }
+  .faq-inner h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); margin-bottom: 44px; }
+  .faq-item {
+    border-bottom: 1px solid rgba(43,38,34,0.14);
+  }
+  .faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 24px 4px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.08rem;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .faq-question .chev { width: 16px; height: 16px; flex-shrink: 0; transition: transform .25s ease; color: var(--sage-dark); }
+  .faq-item.open .faq-question .chev { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+  .faq-answer p { padding: 0 4px 26px; color: var(--ink-soft); font-size: 0.96rem; max-width: 65ch; }
+  .faq-cta { text-align: center; margin-top: 44px; }
+
+  /* ---------- CTA FINAL ---------- */
+  .cta-final { background: var(--walnut); color: var(--walnut-text); text-align: center; }
+  .cta-final .container { max-width: 720px; }
+  .cta-final h2 { color: var(--walnut-text); font-size: clamp(2rem, 4vw, 2.8rem); }
+  .cta-final .subhead { margin-top: 18px; color: #CBBFAD; font-size: 1.08rem; }
+  .cta-final .hero-cta-row { justify-content: center; margin-top: 36px; }
+  .cta-final .microcopy { margin-top: 22px; font-size: 0.82rem; color: #A79A85; letter-spacing: 0.02em; }
+
+  /* ---------- CONTATO ---------- */
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 6vw, 72px);
+    align-items: center;
+  }
+  .contact h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); }
+  .contact-info { margin-top: 26px; display: flex; flex-direction: column; gap: 18px; }
+  .contact-line { display: flex; align-items: flex-start; gap: 14px; font-size: 0.98rem; color: var(--ink-soft); }
+  .contact-line svg { width: 18px; height: 18px; color: var(--sage-dark); flex-shrink: 0; margin-top: 2px; }
+  .contact .photo-slot { aspect-ratio: 4/3; }
+  .contact-cta { margin-top: 30px; }
+  .map-embed {
+    aspect-ratio: 4/3;
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+  }
+  .map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .map-link {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--sage-dark);
+  }
+  .map-link:hover { color: var(--ink); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 40px 0 120px;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 0.82rem;
+    border-top: 1px solid rgba(43,38,34,0.1);
+  }
+  footer p + p { margin-top: 6px; }
+  footer .credit { margin-top: 16px; }
+  footer .credit a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; }
+  footer .credit a:hover { color: var(--ink); }
+
+  /* ---------- WHATSAPP MOBILE BAR ---------- */
+  .wa-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    background: var(--sage-dark);
+    padding: 14px clamp(20px, 5vw, 48px);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.15);
+  }
+  .wa-bar a { color: #FFF8F2; font-weight: 600; font-size: 0.94rem; display: flex; align-items: center; gap: 10px; }
+
+  /* ---------- WHATSAPP FLUTUANTE (desktop) ---------- */
+  .wa-float {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 95;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: var(--sage-dark);
+    color: #FFF8F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 14px 30px -10px rgba(43,38,34,0.45);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .wa-float:hover {
+    background: #4C5D52;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 18px 36px -10px rgba(43,38,34,0.55);
+  }
+  .wa-float svg { width: 26px; height: 26px; }
+
+  /* ---------- REVEAL ANIMATION ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1.in { transition-delay: .1s; }
+  .reveal-delay-2.in { transition-delay: .2s; }
+  .reveal-delay-3.in { transition-delay: .3s; }
+  .reveal-delay-4.in { transition-delay: .4s; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 980px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-gallery { grid-template-columns: repeat(2, 1fr); }
+    .diff-grid { grid-template-columns: repeat(2, 1fr); }
+    .credentials-list { grid-template-columns: 1fr; }
+    .hero, .solution, .about, .contact, .symptoms-inner, .process-inner { grid-template-columns: 1fr; }
+    .hero-photo { order: -1; max-width: 420px; margin: 0 auto; }
+    .symptoms-photo { order: -1; }
+    .process-photo .media { position: static; max-width: 420px; margin: 0 auto; }
+    .solution .photo-slot, .solution .media,
+    .about .photo-slot, .about .media,
+    .symptoms-photo .media { max-width: 420px; margin: 0 auto; }
+  }
+
+  @media (max-width: 768px) {
+    nav.menu { display: none; }
+    .menu-toggle { display: block; }
+    .symptom-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .services-gallery { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .diff-grid { grid-template-columns: 1fr; }
+    .testimonial-grid { grid-template-columns: 1fr; }
+    .contact { grid-template-columns: 1fr; }
+    .wa-bar { display: flex; }
+    .wa-float { display: none; }
+    body { padding-bottom: 64px; }
+    .header-actions .btn-primary.desktop-only { display: none; }
+    :root { --section-pad: 64px; }
+  }
+
+  @media (min-width: 769px) {
+    .wa-bar { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <div class="nav-row">
+    <a href="#hero" class="logo">Dra. Jaqueline Bordin
+      <small>Pediatra &amp; Gastropediatra</small>
+    </a>
+    <nav class="menu" id="nav-menu">
+      <a href="#sintomas" class="navlink">Sintomas</a>
+      <a href="#servicos" class="navlink">Serviços</a>
+      <a href="#sobre" class="navlink">Sobre</a>
+      <a href="#depoimentos" class="navlink">Depoimentos</a>
+      <a href="#faq" class="navlink">FAQ</a>
+      <a href="#contato" class="navlink">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary btn-sm desktop-only" target="_blank" rel="noopener">
+        <svg class="icon-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Agendar
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero container" id="hero">
+  <div class="hero-text reveal">
+    <h1>Seu filho não precisa esperar crescer pra ter uma resposta.</h1>
+    <p class="subhead">Pediatria e gastropediatria em Porto Alegre, do nascimento à pré-adolescência, com o tempo e a atenção que um diagnóstico completo exige.</p>
+    <div class="hero-cta-row">
+      <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener">
+        <svg class="icon-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Agendar consulta
+      </a>
+      <a href="#sobre" class="btn btn-ghost">Conhecer a médica</a>
+    </div>
+    <p class="rating-badge"><span class="stars">★★★★★</span> 4,9 no Google · +50 famílias avaliaram o atendimento</p>
+    <p class="credential-line">Dra. Jaqueline Bordin · CRM/RS 43155 · RQE 34734 (Pediatria) · RQE 38332 (Gastropediatria)</p>
+  </div>
+  <div class="hero-photo reveal reveal-delay-1">
+    <img class="media" src="images/hero.jpg" alt="Dra. Jaqueline Bordin em consulta acolhedora com mãe e filha">
+  </div>
+</section>
+
+<!-- ============ SINTOMAS ============ -->
+<section class="symptoms" id="sintomas">
+  <div class="container">
+    <div class="symptoms-inner">
+      <div class="symptoms-photo reveal">
+        <img class="media" src="images/sintomas.jpg" alt="Criança sentida no sofá com dor abdominal, situação comum que leva famílias a buscar avaliação gastropediátrica" loading="lazy">
+      </div>
+      <div>
+        <div class="symptoms-head reveal">
+          <span class="eyebrow">Isso é com você?</span>
+          <h2>Refluxo que não passa. Dor de barriga sem explicação. Peso que não sobe como deveria.</h2>
+          <p class="subhead">Se alguma dessas frases já passou pela sua cabeça, você não está exagerando: existe um caminho pra entender o que está acontecendo.</p>
+        </div>
+        <div class="symptom-grid">
+          <div class="symptom-card reveal"><span class="dot"></span><p>Refluxo, cólica ou dor abdominal recorrente sem diagnóstico claro</p></div>
+          <div class="symptom-card reveal reveal-delay-1"><span class="dot"></span><p>Dificuldade de ganho de peso ou desenvolvimento</p></div>
+          <div class="symptom-card reveal reveal-delay-2"><span class="dot"></span><p>Suspeita de intolerância ou alergia alimentar</p></div>
+          <div class="symptom-card reveal reveal-delay-3"><span class="dot"></span><p>Sintomas digestivos que já passaram por vários médicos sem resposta definitiva</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUÇÃO ============ -->
+<section class="container">
+  <div class="solution">
+    <div class="reveal">
+      <span class="eyebrow">A abordagem</span>
+      <h2>Uma consulta pensada pra investigar.</h2>
+      <p class="subhead">Cada criança é acompanhada de forma individualizada, com histórico familiar, exame físico completo e conversa aberta.</p>
+      <a href="#como-funciona" class="solution-link">Entenda como funciona a consulta
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <video class="media" src="images/beneficios.mp4" poster="images/beneficios.jpg" autoplay muted loop playsinline preload="metadata">
+        <img class="media" src="images/beneficios.jpg" alt="Família em casa, criança se desenvolvendo bem, brincando com brinquedos montessorianos">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="services" id="servicos">
+  <div class="container">
+    <span class="eyebrow reveal">O que é atendido</span>
+    <h2 class="reveal">Cuidado pediátrico com profundidade de especialista.</h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3v7a5 5 0 0010 0V3M6 3H4M16 3h2M20 14a3 3 0 11-6 0"/></svg></div>
+        <h3>Gastropediatria</h3>
+        <p>Investigação e acompanhamento de refluxo, dor abdominal recorrente, intolerâncias e alergias alimentares, com formação específica em hepatologia e gastroenterologia pediátrica (mestrado UFCSPA).</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.35-9.5-8.5C.6 8.9 2.4 5 6 5c2 0 3.3 1 4 2 1.2-1.2 2.6-2 4-2 3.6 0 5.4 3.9 3.5 7.5C19 16.65 12 21 12 21z"/></svg></div>
+        <h3>Puericultura</h3>
+        <p>Acompanhamento contínuo do crescimento e desenvolvimento, do primeiro mês de vida à pré-adolescência, pra você nunca precisar trocar de pediatra no meio do caminho.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></div>
+        <h3>Consulta pré-natal pediátrica</h3>
+        <p>Uma conversa antes do parto pra já chegar em casa sabendo o que esperar nas primeiras semanas, e com um pediatra de confiança definido antes de precisar dele.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+        <h3>Teste do Hidrogênio Expirado</h3>
+        <p>Exame não invasivo que ajuda a identificar intolerâncias alimentares (como à lactose) com precisão, sem a criança precisar passar por procedimentos mais desconfortáveis.</p>
+      </div>
+    </div>
+    <p class="gallery-label reveal">Conheça o espaço pensado para as crianças</p>
+    <div class="services-gallery">
+      <div class="gallery-item reveal">
+        <img class="media" src="images/servicos-1.jpg" alt="Sala de exame do consultório, ambiente acolhedor com decoração temática infantil" loading="lazy">
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img class="media" src="images/servicos-2.jpg" alt="Cantinho lúdico do consultório com brinquedos e iluminação de lua e estrelas" loading="lazy">
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img class="media" src="images/servicos-3.jpg" alt="Painel sensorial interativo disponível para as crianças na sala de espera" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="container" id="como-funciona">
+  <div class="process-inner">
+    <div class="process-photo reveal">
+      <img class="media" src="images/como-funciona.jpg" alt="Dra. Jaqueline Bordin em retrato acolhedor, à mesa do consultório" loading="lazy">
+    </div>
+    <div>
+      <div class="process-head reveal">
+        <span class="eyebrow">Primeira consulta</span>
+        <h2>O que esperar do primeiro encontro.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <span class="num">01</span>
+          <h3>Histórico completo</h3>
+          <p>Conversa sobre o contexto familiar e a história de saúde da criança.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <span class="num">02</span>
+          <h3>Exame físico e avaliação antropométrica</h3>
+          <p>Crescimento e desenvolvimento avaliados com precisão.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <span class="num">03</span>
+          <h3>Análise de exames</h3>
+          <p>Revisão de exames já existentes, sem repetir o que não é necessário.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <span class="num">04</span>
+          <h3>Conversa aberta</h3>
+          <p>Espaço pra tirar dúvidas sem pressa, com linguagem clara.</p>
+        </div>
+      </div>
+      <div class="process-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        Consulta com duração aproximada de uma hora: tempo suficiente para investigar de verdade.
+      </div>
+      <div class="process-cta reveal">
+        <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener">Agendar minha consulta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE A MÉDICA ============ -->
+<section class="container" id="sobre">
+  <div class="about">
+    <div class="reveal">
+      <img class="media" src="images/sobre-a-medica.jpg" alt="Retrato de confiança da Dra. Jaqueline Bordin, sorrindo em ambiente acolhedor" loading="lazy">
+    </div>
+    <div class="reveal reveal-delay-1">
+      <span class="eyebrow">A médica</span>
+      <h2>Médica especialista e mamãe do Enrico.</h2>
+      <p class="subhead">Dra. Jaqueline Bordin é pediatra (RQE 34734) e gastropediatra (RQE 38332), com mestrado em Pediatria pela UFCSPA e formação específica em hepatologia e gastroenterologia pediátrica. Atua com um princípio simples: todo sintoma tem uma causa, e toda causa merece investigação.</p>
+      <div class="credentials-list">
+        <div class="credential-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>RQE duplo: Pediatria e Gastropediatria</div>
+        <div class="credential-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>Mestrado em Pediatria · UFCSPA</div>
+        <div class="credential-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5V5a2 2 0 012-2h12a2 2 0 012 2v14.5M4 19.5A2.5 2.5 0 016.5 22H18a2 2 0 002-2M4 19.5A2.5 2.5 0 016.5 17H20"/></svg>Hepatologia e Gastroenterologia Pediátrica</div>
+        <div class="credential-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>CRM/RS 43155</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="differentials">
+  <div class="container">
+    <div class="differentials-head reveal">
+      <span class="eyebrow">Diferenciais</span>
+      <h2>Por que famílias escolhem esse acompanhamento.</h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card reveal"><span class="diff-num">01</span><h3>Especialização rara</h3><p>Poucos pediatras têm formação específica em gastropediatria.</p></div>
+      <div class="diff-card reveal reveal-delay-1"><span class="diff-num">02</span><h3>Atendimento individualizado</h3><p>Cada consulta é pensada pro caso, não pra um roteiro padrão.</p></div>
+      <div class="diff-card reveal reveal-delay-2"><span class="diff-num">03</span><h3>Continuidade real</h3><p>Acompanhamento do nascimento aos 14 anos, sem trocar de médico a cada fase.</p></div>
+      <div class="diff-card reveal reveal-delay-3"><span class="diff-num">04</span><h3>Tempo que permite investigar</h3><p>Sem pressa de encerrar em 15 minutos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="container" id="depoimentos">
+  <div class="testimonials-head reveal">
+    <div>
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que as famílias dizem depois da consulta.</h2>
+    </div>
+    <div class="stat-badge">
+      <span class="num">4,9</span>
+      <span class="lbl"><span class="stars">★★★★★</span><br>+50 avaliações no Google</span>
+    </div>
+  </div>
+  <div class="testimonial-grid">
+    <div class="testimonial-card reveal">
+      <span class="quote-mark">&ldquo;</span>
+      <blockquote>Dra Jaque foi uma profissional sem igual. Sempre com atendimento humano, sem interlocutores e atencioso demais. A dra Jaque é a médica que faz além do básico, que torna o problema do seu filho o dela, que resolve, que acolhe e que CURA.</blockquote>
+      <p class="who">Nicoli Kloch</p>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <span class="quote-mark">&ldquo;</span>
+      <blockquote>Desde o primeiro contato me senti acolhida, fui muito bem atendida. Dra Jaqueline é maravilhosa e atenciosa, prezando o bem estar da família. A estrutura da clínica também é ótima, atendimento pontual. Obrigada por tudo! ❤️</blockquote>
+      <p class="who">Laila Farias</p>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <span class="quote-mark">&ldquo;</span>
+      <blockquote>A Dra. Jaque é maravilhosa, super humana e carinhosa com o nosso pequeno! Procuramos ela em um momento desesperador e ela nos acalmou e conseguiu identificar o que realmente nosso filho tinha. Somos imensamente gratos! Super recomendamos.</blockquote>
+      <p class="who">Érica Caetano</p>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-3">
+      <span class="quote-mark">&ldquo;</span>
+      <blockquote>Dra Jaqueline é extremamente competente e atenciosa! Assertiva no tratamento gastro de nosso filho, trazendo resultado rápido e alívio para toda a família 🥰 Conduz a consulta e acompanhamento com empatia, leveza e muito profissionalismo!</blockquote>
+      <p class="who">Andressa Baumgartner Reitz</p>
+    </div>
+  </div>
+
+  <div class="testimonial-featured reveal">
+    <span class="quote-mark">&ldquo;</span>
+    <blockquote>
+      <p>Minha filha hoje está com 1 ano e 4 meses. Conheci a Dra. Jaqueline por acaso e fizemos uma consulta on-line, seguida do retorno. Desde o primeiro atendimento percebi o quanto seu cuidado era diferenciado. Recebi explicações que, durante todo o período em que acompanhei outra profissional, nunca havia recebido.</p>
+      <p>A APLV parecia um grande obstáculo na nossa vida. Eu já estava em dieta de exclusão havia 1 ano e 2 meses e vivia com muito medo de qualquer tentativa de reintrodução. A Dra. Jaqueline me mostrou uma forma mais leve, segura e humanizada de conduzir esse processo. Também orientou a reposição de vitaminas para mim, explicou cada etapa do tratamento da minha filha e, principalmente, me devolveu a tranquilidade que eu havia perdido.</p>
+      <p>Antes, pensar em realizar os testes com leite significava imaginar minha filha sentindo dor. Hoje, após apenas um mês de acompanhamento, eu já não preciso mais manter a dieta de exclusão e minha filha está reagindo muito bem à reintrodução do leite, de forma gradual e segura.</p>
+      <p>Sou muito grata pelo acolhimento, pela competência e pelo cuidado com que conduziu nosso caso. Recomendo de coração a qualquer família que esteja enfrentando a APLV.</p>
+    </blockquote>
+    <p class="who">Lara Gonçalves</p>
+  </div>
+
+  <div class="testimonials-cta reveal">
+    <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener">Quero uma consulta assim pro meu filho</a>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container faq-inner">
+    <span class="eyebrow reveal">Dúvidas frequentes</span>
+    <h2 class="reveal">Perguntas antes de agendar.</h2>
+
+    <div class="faq-item reveal">
+      <button class="faq-question">Quanto tempo dura a consulta?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-answer"><p>Em média uma hora: tempo dedicado a investigar o caso com calma, não só constatar sintomas.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question">Atende convênio?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-answer"><p>O atendimento é exclusivamente particular. Isso permite manter o tempo de consulta necessário pra um acompanhamento real, sem as limitações impostas por convênios.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question">Até que idade é atendido?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-answer"><p>De recém-nascidos a pré-adolescentes de até 14 anos.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question">Qual o valor da consulta?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-answer"><p>Fale com a equipe pelo WhatsApp para valores atualizados.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-question">Tem estacionamento no local?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-answer"><p>Sim, há opção de estacionamento próximo ao consultório.</p></div>
+    </div>
+
+    <div class="faq-cta reveal">
+      <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20antes%20de%20agendar." class="btn btn-ghost" target="_blank" rel="noopener">Ainda com dúvidas? Fale direto no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final">
+  <div class="container reveal">
+    <h2>Seu filho merece uma consulta que investiga de verdade.</h2>
+    <p class="subhead">Agende agora e leve pra casa mais do que um diagnóstico: leve clareza.</p>
+    <div class="hero-cta-row">
+      <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener">
+        <svg class="icon-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Agendar consulta no WhatsApp
+      </a>
+    </div>
+    <p class="microcopy">Atendimento particular · Consulta com duração aproximada de 1 hora · 0 a 14 anos</p>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="container" id="contato">
+  <div class="contact">
+    <div class="reveal">
+      <span class="eyebrow">Localização</span>
+      <h2>Consultório no Rio Branco, fácil de chegar.</h2>
+      <div class="contact-info">
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-7.4 7-12.5A7 7 0 105 9.5C5 14.6 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          R. Miguel Tostes, 201, Sala 706, Bairro Rio Branco, Porto Alegre/RS
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.4-1.4a2 2 0 012.1-.5c.9.3 1.8.5 2.7.7a2 2 0 011.8 2z"/></svg>
+          (51) 99620-4361
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2"/></svg>
+          Estacionamento disponível nas proximidades
+        </div>
+      </div>
+      <div class="contact-cta">
+        <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.7505849177073!2d-51.206159199999995!3d-30.029996999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df47313c505453%3A0xdc225c8e2960e9c7!2sJaqueline%20da%20Luz%20Bordin%20-%20Puericultura%20e%20Gastropediatria!5e1!3m2!1spt-BR!2sbr!4v1785526650558!5m2!1spt-BR!2sbr" title="Localização do consultório da Dra. Jaqueline Bordin no Google Maps" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <a class="map-link" href="https://maps.app.goo.gl/effBf4daHpiTFCN49" target="_blank" rel="noopener">
+        Abrir no Google Maps
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <p>Dra. Jaqueline Bordin · CRM/RS 43155</p>
+    <p>Pediatra (RQE 34734) · Gastropediatra (RQE 38332)</p>
+    <p>&copy; 2026. Todos os direitos reservados.</p>
+    <p class="credit">Feito com ❤️ por <a href="https://www.instagram.com/vivienvital" target="_blank" rel="noopener">vivienvital</a></p>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP MOBILE BAR ============ -->
+<div class="wa-bar">
+  <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+    <svg class="icon-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    Agendar no WhatsApp
+  </a>
+</div>
+
+<!-- ============ WHATSAPP FLUTUANTE (desktop) ============ -->
+<a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="wa-float" target="_blank" rel="noopener" aria-label="Agendar consulta pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</a>
+
+<script>
+  // Header shadow on scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  });
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navMenu.style.display === 'flex';
+    navMenu.style.cssText = isOpen
+      ? ''
+      : 'display:flex;position:fixed;top:64px;left:0;right:0;background:#FAF7F2;flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid rgba(43,38,34,0.08);box-shadow:0 12px 30px -12px rgba(43,38,34,0.15);';
+  });
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    if (window.innerWidth <= 768) navMenu.style.display = '';
+  }));
+
+  // Scroll-spy
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navlink');
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.navlink[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => spyObserver.observe(s));
+
+  // Reveal on scroll
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(open => {
+        open.classList.remove('open');
+        open.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
