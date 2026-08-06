@@ -846,7 +846,10 @@
     .diff-grid { grid-template-columns: repeat(2, 1fr); }
     .credentials-list { grid-template-columns: 1fr; }
     .hero, .solution, .about, .contact, .symptoms-inner, .process-inner { grid-template-columns: 1fr; }
-    .hero-photo { order: -1; max-width: 420px; margin: 0 auto; }
+    .hero-left { display: contents; }
+    .hero-heading { order: 1; }
+    .hero-photo { order: 2; max-width: 420px; margin: 0 auto; }
+    .hero-actions { order: 3; }
     .symptoms-photo { order: -1; }
     .process-photo .media { position: static; max-width: 420px; margin: 0 auto; }
     .solution .photo-slot, .solution .media,
@@ -906,18 +909,22 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero container" id="hero">
-  <div class="hero-text reveal">
-    <h1>Seu filho não precisa esperar crescer para ter uma resposta.</h1>
-    <p class="subhead">Pediatria e gastropediatria em Porto Alegre, do nascimento à pré-adolescência, com o tempo e a atenção que um diagnóstico completo exige.</p>
-    <div class="hero-cta-row">
-      <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener">
-        <svg class="icon-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        Agendar consulta
-      </a>
-      <a href="#sobre" class="btn btn-ghost">Conhecer a médica</a>
+  <div class="hero-left">
+    <div class="hero-heading reveal">
+      <h1>Seu filho não precisa esperar crescer para ter uma resposta.</h1>
+      <p class="subhead">Pediatria e gastropediatria em Porto Alegre, do nascimento à pré-adolescência, com o tempo e a atenção que um diagnóstico completo exige.</p>
     </div>
-    <p class="rating-badge"><span class="stars">★★★★★</span> 4,9 no Google · +50 famílias avaliaram o atendimento</p>
-    <p class="credential-line">Dra. Jaqueline Bordin · CRM/RS 43155 · RQE 34734 (Pediatria) · RQE 38332 (Gastropediatria)</p>
+    <div class="hero-actions reveal reveal-delay-1">
+      <div class="hero-cta-row">
+        <a href="https://wa.me/5551996204361?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn-primary" target="_blank" rel="noopener">
+          <svg class="icon-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Agendar consulta
+        </a>
+        <a href="#sobre" class="btn btn-ghost">Conhecer a médica</a>
+      </div>
+      <p class="rating-badge"><span class="stars">★★★★★</span> 4,9 no Google · +50 famílias avaliaram o atendimento</p>
+      <p class="credential-line">Dra. Jaqueline Bordin · CRM/RS 43155 · RQE 34734 (Pediatria) · RQE 38332 (Gastropediatria)</p>
+    </div>
   </div>
   <div class="hero-photo reveal reveal-delay-1">
     <img class="media" src="images/hero.jpg" alt="Dra. Jaqueline Bordin em consulta acolhedora com mãe e filha">
