@@ -387,6 +387,46 @@
     background: radial-gradient(circle, rgba(176,141,87,0.14), transparent 65%);
     pointer-events: none;
   }
+  .services .container { position: relative; z-index: 2; }
+
+  /* ---------- CÉU (lua + estrelas) ---------- */
+  .services-sky {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .sky-moon {
+    position: absolute;
+    top: 7%;
+    right: 9%;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(176,141,87,0.32), rgba(176,141,87,0.1) 60%, transparent 75%);
+    box-shadow: 0 0 60px 14px rgba(176,141,87,0.1);
+    animation: sky-float 10s ease-in-out infinite;
+  }
+  .sky-star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.28;
+    animation: sky-twinkle 5s ease-in-out infinite;
+  }
+  .sky-star.lg { width: 5px; height: 5px; }
+  @keyframes sky-twinkle {
+    0%, 100% { opacity: 0.2; transform: translateY(0) scale(1); }
+    50% { opacity: 0.35; transform: translateY(-8px) scale(1.25); }
+  }
+  @keyframes sky-float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-14px) translateX(-6px); }
+  }
+
   .services .eyebrow { color: #D8B98F; }
   .services .eyebrow::before { background: var(--gold); }
   .services h2 { color: var(--walnut-text); font-size: clamp(1.9rem, 3.2vw, 2.6rem); max-width: 22ch; }
@@ -912,6 +952,21 @@
 
 <!-- ============ SERVIÇOS ============ -->
 <section class="services" id="servicos">
+  <div class="services-sky" aria-hidden="true">
+    <span class="sky-moon"></span>
+    <span class="sky-star lg" style="top:14%; left:12%; animation-delay:.2s; animation-duration:4.5s;"></span>
+    <span class="sky-star" style="top:9%; left:38%; animation-delay:1.4s; animation-duration:5.5s;"></span>
+    <span class="sky-star" style="top:24%; left:70%; animation-delay:.8s; animation-duration:6s;"></span>
+    <span class="sky-star lg" style="top:38%; left:20%; animation-delay:2.2s; animation-duration:5s;"></span>
+    <span class="sky-star" style="top:33%; left:88%; animation-delay:0s; animation-duration:4.8s;"></span>
+    <span class="sky-star" style="top:52%; left:6%; animation-delay:1.8s; animation-duration:5.2s;"></span>
+    <span class="sky-star lg" style="top:58%; left:80%; animation-delay:.6s; animation-duration:6.5s;"></span>
+    <span class="sky-star" style="top:70%; left:45%; animation-delay:2.6s; animation-duration:5s;"></span>
+    <span class="sky-star" style="top:78%; left:15%; animation-delay:1.2s; animation-duration:4.6s;"></span>
+    <span class="sky-star lg" style="top:83%; left:66%; animation-delay:.4s; animation-duration:5.8s;"></span>
+    <span class="sky-star" style="top:92%; left:30%; animation-delay:2s; animation-duration:5.4s;"></span>
+    <span class="sky-star" style="top:95%; left:90%; animation-delay:1.6s; animation-duration:4.9s;"></span>
+  </div>
   <div class="container">
     <span class="eyebrow reveal">O que é atendido</span>
     <h2 class="reveal">Cuidado pediátrico com profundidade de especialista.</h2>
