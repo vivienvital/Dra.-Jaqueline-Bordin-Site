@@ -827,6 +827,30 @@
   }
   .wa-float svg { width: 26px; height: 26px; }
 
+  /* ---------- AVISO DE COOKIES ---------- */
+  .cookie-banner {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 98;
+    max-width: 360px;
+    background: var(--cream);
+    border: 1px solid rgba(43,38,34,0.1);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-soft);
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transform: translateY(24px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .4s ease, opacity .4s ease;
+  }
+  .cookie-banner.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .cookie-banner p { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.5; }
+  .cookie-banner .btn { align-self: flex-start; }
+
   /* ---------- REVEAL ANIMATION ---------- */
   .reveal {
     opacity: 0;
@@ -850,6 +874,8 @@
     .hero-heading { order: 1; }
     .hero-photo { order: 2; max-width: 420px; margin: 0 auto; }
     .hero-actions { order: 3; }
+    .hero::before, .hero::after { display: none; }
+    .services::before { display: none; }
     .symptoms-photo { order: -1; }
     .process-photo .media { position: static; max-width: 420px; margin: 0 auto; }
     .solution .photo-slot, .solution .media,
@@ -872,6 +898,7 @@
     body { padding-bottom: 64px; }
     .header-actions .btn-primary.desktop-only { display: none; }
     :root { --section-pad: 64px; }
+    .cookie-banner { left: 16px; right: 16px; bottom: 78px; max-width: none; }
   }
 
   @media (min-width: 769px) {
@@ -1301,6 +1328,12 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
 </a>
 
+<!-- ============ AVISO DE COOKIES ============ -->
+<div class="cookie-banner" id="cookie-banner">
+  <p>Este site usa cookies para melhorar sua experiência de navegação. Ao continuar navegando, você concorda com o uso de cookies.</p>
+  <button class="btn btn-primary btn-sm" id="cookie-accept">Entendi</button>
+</div>
+
 <script>
   // Header shadow on scroll
   const header = document.getElementById('site-header');
@@ -1361,6 +1394,17 @@
         answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });
+  });
+
+  // Aviso de cookies
+  const cookieBanner = document.getElementById('cookie-banner');
+  const cookieAccept = document.getElementById('cookie-accept');
+  if (!localStorage.getItem('cookieConsent')) {
+    setTimeout(() => cookieBanner.classList.add('show'), 800);
+  }
+  cookieAccept.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'true');
+    cookieBanner.classList.remove('show');
   });
 </script>
 
