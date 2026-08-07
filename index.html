@@ -1005,7 +1005,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
     </div>
     <div class="reveal reveal-delay-1">
-      <video class="media" src="images/beneficios.mp4" poster="images/beneficios.jpg" autoplay muted loop playsinline preload="auto">
+      <video class="media lazy-video" data-src="images/beneficios.mp4" poster="images/beneficios.jpg" muted loop playsinline preload="none">
         <img class="media" src="images/beneficios.jpg" alt="Família em casa, criança se desenvolvendo bem, brincando com brinquedos montessorianos">
       </video>
     </div>
@@ -1265,7 +1265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ============ CTA FINAL ============ -->
 <section class="cta-final">
-  <video class="cta-video" src="images/cta-video.mp4" autoplay muted loop playsinline preload="auto"></video>
+  <video class="cta-video lazy-video" data-src="images/cta-video.mp4" muted loop playsinline preload="none"></video>
   <div class="cta-overlay"></div>
   <div class="container reveal">
     <h2>Seu filho merece uma consulta que investiga de verdade.</h2>
@@ -1389,6 +1389,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Carrega e toca os vídeos só quando a seção está prestes a aparecer (economiza banda no carregamento inicial)
+  const lazyVideoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        video.src = video.dataset.src;
+        video.load();
+        video.play().catch(() => {});
+        lazyVideoObserver.unobserve(video);
+      }
+    });
+  }, { rootMargin: '600px 0px' });
+  document.querySelectorAll('.lazy-video').forEach(v => lazyVideoObserver.observe(v));
 
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(btn => {
