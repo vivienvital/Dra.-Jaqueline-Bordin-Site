@@ -1,11 +1,23 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+<!-- Google Tag Manager (carregamento adiado: só entra na 1ª interação do usuário ou após 3,5s, o que vier primeiro — tira o script do caminho crítico de renderização) -->
+<script>(function(w,d,s,l,i){
+  w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  function loadGTM(){
+    if (w.__gtmLoaded) return;
+    w.__gtmLoaded = true;
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+    ['scroll','touchstart','mousemove','keydown','click'].forEach(function(ev){
+      window.removeEventListener(ev, loadGTM, {passive:true});
+    });
+  }
+  ['scroll','touchstart','mousemove','keydown','click'].forEach(function(ev){
+    window.addEventListener(ev, loadGTM, {passive:true, once:true});
+  });
+  setTimeout(loadGTM, 3500);
 })(window,document,'script','dataLayer','GTM-KPBZBFGN');</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
