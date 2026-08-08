@@ -150,6 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   /* Foto/vídeo real */
+  picture { display: block; width: 100%; }
   .media {
     width: 100%;
     display: block;
@@ -948,6 +949,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
+<main>
 <!-- ============ HERO ============ -->
 <section class="hero container" id="hero">
   <div class="hero-left">
@@ -968,7 +970,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="hero-photo reveal reveal-delay-1">
-    <img class="media" src="images/hero.jpg" alt="Dra. Jaqueline Bordin em consulta acolhedora com mãe e filha" fetchpriority="high">
+    <picture>
+
+      <source srcset="images/hero.webp" type="image/webp">
+
+      <img class="media" src="images/hero.jpg" alt="Dra. Jaqueline Bordin em consulta acolhedora com mãe e filha" fetchpriority="high">
+
+    </picture>
   </div>
 </section>
 
@@ -977,7 +985,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="symptoms-inner">
       <div class="symptoms-photo reveal">
-        <img class="media" src="images/sintomas.jpg" alt="Criança sentida no sofá com dor abdominal, situação comum que leva famílias a buscar avaliação gastropediátrica" loading="lazy">
+        <picture>
+
+          <source srcset="images/sintomas.webp" type="image/webp">
+
+          <img class="media" src="images/sintomas.jpg" alt="Criança sentida no sofá com dor abdominal, situação comum que leva famílias a buscar avaliação gastropediátrica" loading="lazy">
+
+        </picture>
       </div>
       <div>
         <div class="symptoms-head reveal">
@@ -1009,7 +1023,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="reveal reveal-delay-1">
       <video class="media lazy-video" data-src="images/beneficios.mp4" poster="images/beneficios.jpg" muted loop playsinline preload="none">
-        <img class="media" src="images/beneficios.jpg" alt="Família em casa, criança se desenvolvendo bem, brincando com brinquedos montessorianos">
+        <picture>
+
+          <source srcset="images/beneficios.webp" type="image/webp">
+
+          <img class="media" src="images/beneficios.jpg" alt="Família em casa, criança se desenvolvendo bem, brincando com brinquedos montessorianos">
+
+        </picture>
       </video>
     </div>
   </div>
@@ -1080,13 +1100,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="gallery-label reveal">Conheça o espaço pensado para as crianças</p>
     <div class="services-gallery">
       <div class="gallery-item reveal">
-        <img class="media" src="images/servicos-1.jpg" alt="Sala de exame do consultório, ambiente acolhedor com decoração temática infantil" loading="lazy">
+        <picture>
+
+          <source srcset="images/servicos-1.webp" type="image/webp">
+
+          <img class="media" src="images/servicos-1.jpg" alt="Sala de exame do consultório, ambiente acolhedor com decoração temática infantil" loading="lazy">
+
+        </picture>
       </div>
       <div class="gallery-item reveal reveal-delay-1">
-        <img class="media" src="images/servicos-2.jpg" alt="Cantinho lúdico do consultório com brinquedos e iluminação de lua e estrelas" loading="lazy">
+        <picture>
+
+          <source srcset="images/servicos-2.webp" type="image/webp">
+
+          <img class="media" src="images/servicos-2.jpg" alt="Cantinho lúdico do consultório com brinquedos e iluminação de lua e estrelas" loading="lazy">
+
+        </picture>
       </div>
       <div class="gallery-item reveal reveal-delay-2">
-        <img class="media" src="images/servicos-3.jpg" alt="Painel sensorial interativo disponível para as crianças na sala de espera" loading="lazy">
+        <picture>
+
+          <source srcset="images/servicos-3.webp" type="image/webp">
+
+          <img class="media" src="images/servicos-3.jpg" alt="Painel sensorial interativo disponível para as crianças na sala de espera" loading="lazy">
+
+        </picture>
       </div>
     </div>
   </div>
@@ -1096,7 +1134,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="container" id="como-funciona">
   <div class="process-inner">
     <div class="process-photo reveal">
-      <img class="media" src="images/como-funciona.jpg" alt="Dra. Jaqueline Bordin em retrato acolhedor, à mesa do consultório" loading="lazy">
+      <picture>
+
+        <source srcset="images/como-funciona.webp" type="image/webp">
+
+        <img class="media" src="images/como-funciona.jpg" alt="Dra. Jaqueline Bordin em retrato acolhedor, à mesa do consultório" loading="lazy">
+
+      </picture>
     </div>
     <div>
       <div class="process-head reveal">
@@ -1140,7 +1184,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="container" id="sobre">
   <div class="about">
     <div class="reveal">
-      <img class="media" src="images/sobre-a-medica.jpg" alt="Retrato de confiança da Dra. Jaqueline Bordin, sorrindo em ambiente acolhedor" loading="lazy">
+      <picture>
+
+        <source srcset="images/sobre-a-medica.webp" type="image/webp">
+
+        <img class="media" src="images/sobre-a-medica.jpg" alt="Retrato de confiança da Dra. Jaqueline Bordin, sorrindo em ambiente acolhedor" loading="lazy">
+
+      </picture>
     </div>
     <div class="reveal reveal-delay-1">
       <span class="eyebrow">A médica</span>
@@ -1318,6 +1368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer>
@@ -1419,7 +1470,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
       if (!isOpen) {
         item.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        });
       }
     });
   });
